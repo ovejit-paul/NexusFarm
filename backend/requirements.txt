@@ -1,0 +1,18 @@
+fastapi>=0.110
+uvicorn[standard]>=0.27
+pillow>=10.0
+numpy>=1.24
+pydantic>=2.0
+
+# Interpreter for the .tflite model.
+#
+# tflite-runtime is the smallest option (a few MB against ~600 MB for
+# full TensorFlow), which matters on a free hosting tier with a build
+# size limit. It only publishes Linux wheels, so the marker below skips
+# it on Windows and macOS.
+tflite-runtime>=2.14 ; sys_platform == "linux"
+
+# On Windows/macOS, or if the line above is skipped, main.py falls back
+# to TensorFlow. Install it yourself if you do not already have it:
+#     pip install tensorflow
+requests>=2.31

@@ -1,0 +1,36 @@
+name: nexusfarm
+description: "NexusFarm - crop disease diagnosis for smallholder farmers"
+publish_to: 'none'
+version: 1.0.0
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+
+  # Taking / choosing a crop photo. Works on mobile and web.
+  image_picker: ^1.0.7
+
+  # Running the trained model on the phone, offline.
+  tflite_flutter: ^0.12.1
+  image: ^4.1.7
+
+  # Calling our own API.
+  http: ^1.2.0
+
+  # Keeping the farmer's profile and scan history between sessions.
+  # Works on mobile and web (localStorage in a browser).
+  shared_preferences: ^2.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/model/

@@ -1,0 +1,8 @@
+# Keep line endings consistent across Windows and Linux checkouts.
+* text=auto eol=lf
+
+# Binary files git should not try to diff or convert.
+*.tflite binary
+*.png binary
+*.jpg binary
+*.pdf binary

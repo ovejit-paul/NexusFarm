@@ -1,0 +1,54 @@
+# ---- Flutter / Dart ----
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+build/
+*.iml
+.idea/
+.vscode/
+*.lock
+!pubspec.lock
+
+# Generated platform folders — recreate with `flutter create .`
+android/
+ios/
+linux/
+macos/
+windows/
+web/
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# ---- Runtime data (regenerated, not source) ----
+backend/outbreaks.db
+backend/prices.json
+backend/*.log
+
+# ---- Training artefacts ----
+# The datasets are gigabytes and freely downloadable; the scripts that
+# fetch and use them are what belong in version control.
+plantvillage*/
+New Plant Diseases*/
+training/small/
+training/output/
+output_full/
+*.zip
+*.h5
+*.keras
+saved_model/
+
+# NOTE: assets/model/model.tflite and backend/model/model.tflite ARE
+# committed on purpose. At 4.4 MB they fit comfortably in git, and
+# without them the app falls back to sample results — anyone cloning
+# this should get a working app.
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
